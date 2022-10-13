@@ -27,13 +27,14 @@ jobs:
           ./unit_test --gtest_output=xml:../../results.xml
           vjunit -f ../../results.xml -o ../../results.html
 
-      # commit the results and show the results in the pull request
-      - name: Commit results and show results in pull request
-        uses: stefanzweifel/git-auto-commit-action@v4
+      # Upload the results to the gitpages
+      - name: Upload results to gitpages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          commit_message: Update results
-          commit_options: '--no-verify'
-          file_pattern: results.html
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: results.html
+
 
 #       # commit the results to the repo 
 #       - name: Commit results

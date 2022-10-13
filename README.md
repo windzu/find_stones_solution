@@ -66,8 +66,8 @@ The googletest framework is used for testing, and the writing of test cases foll
 ## Question C
 
 **Integer**
-- 时间复杂度：O(max(R, N))
-- 空间复杂度：O(max(R, N))
+- Time complexity：O(max(R, N))
+- Space Complexity：O(max(R, N))
 
 **Floating Point**
 
