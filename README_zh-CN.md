@@ -4,8 +4,7 @@
 
 为了方便贵司面试官对我的代码进行评估，我将代码提交到了github上，地址为：[find_stones](https://github.com/windzu/find_stones_solution)
 
-(在线查看有点问题，建议下载到本地查看)
-通过github action生成的测试结果可通过[下载测试结果](https://github.com/windzu/find_stones_solution/results.html)
+测试结果通过github action生成，可在[github page](https://windzu.github.io/find_stones_solution/)查看
 
 ### Local Test
 
