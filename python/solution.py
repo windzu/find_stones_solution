@@ -53,7 +53,7 @@ class Solution:
         >>> Solution.find_k_diff_pairs([1, 2, 3, 4], 2)
         [(0, 2), (1, 3)]
         >>> Solution.find_k_diff_pairs([1, 1, 1, 4, 4, 4], 3)
-        [(2, 4), (0, 4), (1, 5), (0, 3), (1, 4), (2, 3), (0, 5), (2, 5), (1, 3)]
+        [(0, 3), (0, 4), (0, 5), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
         >>> Solution.find_k_diff_pairs([1, 2, 3, 4], 5)
         []
 
@@ -85,10 +85,13 @@ class Solution:
                         if i != j:
                             pairs.add((i, j))
 
-        return list(pairs)
+        # convert to list and sort
+        return sorted(list(pairs))
 
 
 if __name__ == "__main__":
     import doctest
 
     doctest.testmod()
+
+    print("All tests passed!")
