@@ -26,17 +26,22 @@ class Solution {
    * @description: Find the first pair (nums[j]-nums[i]) that satisfies the nums[j]-nums[i] == k condition,
    * then return the pair of values (i, j) (can be None),
    * the specific conditions are as follows：
-   * - i != j
-   * - nums[i] < nums[j]
-   * - nums[j] - nums[i] == k
+   *  - i != j
+   *  - nums[i] < nums[j]
+   *  - nums[j] - nums[i] == k
    * Example:
-   * Input: nums = [3, 1, 4, 1, 5], k = 2
-   * Output: [0,1]
+   *  Input: nums = [3, 1, 4, 1, 5], k = 2
+   *  Output: [0,1]
    * @param {std::vector<T>} nums : the input array
    * @param {T} k : the difference value
    * @return {std::vector<T>} : the pair of values (nums[i], nums[j]) (can be None)
    */
   std::vector<int> find_k_diff_pair(const std::vector<T>& nums, T k) {
+    // check input
+    if (nums.size() < 2) {
+      return {};
+    }
+
     // When the input type is a floating point number, the hash table cannot be used
     // because the floating point number cannot be used as a key in the hash table.
     // So we need to use sorting and comparison to solve the problem
@@ -99,17 +104,22 @@ class Solution {
    * then return the list of pairs [(i, j),...] (can be empty),
    * NOTE : (nums[i], nums[j]) and (nums[j], nums[i]) are considered the same pair,
    * the specific conditions are as follows：
-   * - i != j
-   * - nums[i] < nums[j]
-   * - nums[j] - nums[i] == k
+   *  - i != j
+   *  - nums[i] < nums[j]
+   *  - nums[j] - nums[i] == k
    * Example:
-   * Input: nums = [3, 1, 4, 1, 5], k = 2
-   * Output: [[0,4],[1,0],[3,0]]
+   *  Input: nums = [3, 1, 4, 1, 5], k = 2
+   *  Output: [[0,4],[1,0],[3,0]]
    * @param {std::vector<T>} nums : the input array
    * @param {T} k : the difference value
    * @return {std::vector<std::vector<T>>} : the list of pairs [(i, j),...] (can be empty)
    */
   std::vector<std::vector<int>> find_k_diff_pairs(const std::vector<T>& nums, T k) {
+    // check input
+    if (nums.size() < 2) {
+      return {};
+    }
+
     std::unordered_map<T, std::vector<int>> visited;
     std::unordered_map<int, std::unordered_set<int>> res;
 

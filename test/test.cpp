@@ -22,7 +22,9 @@ TEST(test_q1, int_case0) {
   Solution<int> s;
   std::vector<int> nums = {1, 2, 3, 4, 5};
   int k = 2;
-  EXPECT_EQ(s.find_k_diff_pair(nums, k), std::vector<int>({0, 2}));
+  std::vector<int> expected = {0, 2};
+  std::vector<int> res = s.find_k_diff_pair(nums, k);
+  EXPECT_EQ(res, expected);
 }
 
 TEST(test_q1, int_case1) {
@@ -30,7 +32,9 @@ TEST(test_q1, int_case1) {
   Solution<int> s;
   std::vector<int> nums = {-1, 2, 1, 4, -5};
   int k = 2;
-  EXPECT_EQ(s.find_k_diff_pair(nums, k), std::vector<int>({0, 2}));
+  std::vector<int> expected = {0, 2};
+  std::vector<int> res = s.find_k_diff_pair(nums, k);
+  EXPECT_EQ(res, expected);
 }
 
 TEST(test_q1, int_case2) {
@@ -38,7 +42,9 @@ TEST(test_q1, int_case2) {
   Solution<int> s;
   std::vector<int> nums = {1, 1, 1, 4, -5};
   int k = 0;
-  EXPECT_EQ(s.find_k_diff_pair(nums, k), std::vector<int>({0, 1}));
+  std::vector<int> expected = {0, 1};
+  std::vector<int> res = s.find_k_diff_pair(nums, k);
+  EXPECT_EQ(res, expected);
 }
 
 TEST(test_q1, float_case0) {
@@ -46,7 +52,9 @@ TEST(test_q1, float_case0) {
   Solution<float> s;
   std::vector<float> nums = {2.2, -1.1, 1, -0.5, -1.1};
   float k = 3.3;
-  EXPECT_EQ(s.find_k_diff_pair(nums, k), std::vector<int>({1, 0}));
+  std::vector<int> expected = {1, 0};
+  std::vector<int> res = s.find_k_diff_pair(nums, k);
+  EXPECT_EQ(res, expected);
 }
 
 TEST(test_q1, double_case0) {
@@ -54,7 +62,9 @@ TEST(test_q1, double_case0) {
   Solution<double> s;
   std::vector<double> nums = {2.2, -1.1, 1, -0.5, -1.1};
   double k = 3.3;
-  EXPECT_EQ(s.find_k_diff_pair(nums, k), std::vector<int>({1, 0}));
+  std::vector<int> expected = {1, 0};
+  std::vector<int> res = s.find_k_diff_pair(nums, k);
+  EXPECT_EQ(res, expected);
 }
 
 TEST(test_q3, int_case0) {
@@ -62,11 +72,11 @@ TEST(test_q3, int_case0) {
   Solution<int> s;
   std::vector<int> nums = {3, 1, 4, 1, 5};
   int k = 2;
-  std::vector<std::vector<int>> expect_res = {{0, 4}, {1, 0}, {3, 0}};  // [[0,4],[1,0],[3,0]]
+  std::vector<std::vector<int>> expected = {{0, 4}, {1, 0}, {3, 0}};  // [[0,4],[1,0],[3,0]]
   std::vector<std::vector<int>> res = s.find_k_diff_pairs(nums, k);
   // sort the result
   std::sort(res.begin(), res.end());
-  EXPECT_EQ(res, expect_res);
+  EXPECT_EQ(res, expected);
 }
 
 // Test Question C
@@ -75,11 +85,11 @@ TEST(test_q3, int_case1) {
   Solution<int> s;
   std::vector<int> nums = {3, 3, 3, 1, 1};
   int k = 2;
-  std::vector<std::vector<int>> expect_res = {{3, 0}, {3, 1}, {3, 2}, {4, 0}, {4, 1}, {4, 2}};
+  std::vector<std::vector<int>> expected = {{3, 0}, {3, 1}, {3, 2}, {4, 0}, {4, 1}, {4, 2}};
   std::vector<std::vector<int>> res = s.find_k_diff_pairs(nums, k);
   // sort the result
   std::sort(res.begin(), res.end());
-  EXPECT_EQ(res, expect_res);
+  EXPECT_EQ(res, expected);
 }
 
 TEST(test_q3, int_case2) {
@@ -87,9 +97,9 @@ TEST(test_q3, int_case2) {
   Solution<int> s;
   std::vector<int> nums = {3, 3, 3, 1, 1};
   int k = 0;
-  std::vector<std::vector<int>> expect_res = {{0, 1}, {0, 2}, {1, 2}, {3, 4}};
+  std::vector<std::vector<int>> expected = {{0, 1}, {0, 2}, {1, 2}, {3, 4}};
   std::vector<std::vector<int>> res = s.find_k_diff_pairs(nums, k);
   // sort the result
   std::sort(res.begin(), res.end());
-  EXPECT_EQ(res, expect_res);
+  EXPECT_EQ(res, expected);
 }
