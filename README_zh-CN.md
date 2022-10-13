@@ -4,7 +4,8 @@
 
 为了方便贵司面试官对我的代码进行评估，我将代码提交到了github上，地址为：[find_stones](https://github.com/windzu/find_stones_solution)
 
-通过github action生成的测试结果可查看[results](https://github.com/windzu/find_stones_solution/results.html)
+(在线查看有点问题，建议下载到本地查看)
+通过github action生成的测试结果可通过[下载测试结果](https://github.com/windzu/find_stones_solution/results.html)
 
 ### Local Test
 
@@ -59,6 +60,11 @@ Output: [1,2]
 - 空间复杂度：O(nlogn)
 
 ### 3. Analysis & Optimization
+
+本题的核心是**查找**，但是查找往往需要排序，通常复杂度为O(nlogn)
+为了实现O(n)的时间复杂度，本题解法使用hash表来存储数组中的元素，key为数组元素，value为数组元素对应的下标，这样在遍历数组的时候，只需要O(1)的时间复杂度就可以找到满足条件的元素，从而实现O(n)的时间复杂度
+
+但是，如果数组中的元素是浮点数，那么hash表就无法使用了，因为浮点数的精度问题，两个浮点数相减的结果可能是一个很小的浮点数，但是在计算机中却无法表示，这样就会导致hash表中的key无法找到，从而导致无法找到满足条件的元素，多种尝试无果后，最终决定针对浮点数情况使用排序+双指针的方式来实现，时间复杂度为O(nlogn)
 
 ### 4. Test Case
 > 详情请参考 [test](test/test.cpp)

@@ -1,5 +1,12 @@
 # Answer
 
+## Introduction
+
+In order to facilitate your company's interviewer to evaluate my code, I submitted the code to github at the address of：[find_stones](https://github.com/windzu/find_stones_solution)
+
+(There is a problem with online viewing, it is recommended to download to local viewing)
+Test results generated via github action are available via [download test results](https://github.com/windzu/find_stones_solution/results.html)
+
 ## Question A
 > Formally describe the question
 
@@ -42,6 +49,12 @@ Please refer to [solution](lib/solution.hpp)
 
 ### 3. Analysis & Optimization
 
+The core of this problem is **search**, but search often requires sorting, usually with a complexity of O(nlogn)
+
+In order to achieve the time complexity of O(n), the solution of this problem uses a hash table to store the elements in the array, the key is the array element, and the value is the subscript corresponding to the array element, so when traversing the array, only O(1) The time complexity of , you can find the elements that satisfy the conditions, so as to realize the time complexity of O(n)
+
+However, if the elements in the array are floating-point numbers, the hash table cannot be used, because of the precision of floating-point numbers, the result of subtracting two floating-point numbers may be a very small floating-point number, but it cannot be represented in the computer. , this will cause the key in the hash table to be unable to be found, resulting in the inability to find elements that meet the conditions. After various attempts were unsuccessful, the final decision was made to use sorting + double pointers for floating-point numbers. The time complexity is O (nlogn)
+
 ### 4. Test Case
 > please refer to [test](test/test.cpp)
 
@@ -62,9 +75,9 @@ I haven't thought of a better way for the time being, and I haven't implemented 
 
 ## One More Thing
 
-为了快速实现，我同时也实现了一个python版本的代码，代码地址为：[solution](python/solution.py)
+For quick implementation, I also implemented a python version of the code, the code address is：[solution](python/solution.py)
 
-可以通过以下命令进行测试：
+You can test it with the following command：
 
 ```bash
 cd python && \
