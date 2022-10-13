@@ -1,0 +1,54 @@
+name: Unit Tests
+# on push or pull request to the main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  gtest:
+    runs-on: ubuntu-latest
+    continue-on-error: true # allow the job to fail
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: sudo apt-get install libgtest-dev cmake && pip3 install vjunit
+      # Build project and run unit tests and output the results to xml file
+      - name: Build and run unit tests and output to xml file and run vjunit
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make
+          cd test
+          ./unit_test --gtest_output=xml:../../results.xml
+          vjunit -f ../../results.xml -o ../../results.html
+
+      # commit the results and show the results in the pull request
+      - name: Commit results and show results in pull request
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update results
+          commit_options: '--no-verify'
+          file_pattern: results.html
+
+#       # commit the results to the repo 
+#       - name: Commit results
+#         uses: EndBug/add-and-commit@v7
+#         with:
+#           author_name: ${{ github.actor }}
+#           author_email: ${{ github.actor }}@users.noreply.github.com
+#           message: "Update unit test results"
+#           add: "results.html"
+# 
+#       # push the results to the repo
+#       - name: Push results
+#         uses: ad-m/github-push-action@master
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           branch: ${{ github.head_ref }}
+
+
