@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="8" failures="0" disabled="0" errors="0" time="0" timestamp="2022-10-13T08:42:47.335" name="AllTests">
-  <testsuite name="test_q1" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2022-10-13T08:42:47.335">
-    <testcase name="int_case0" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="20" status="run" result="completed" time="0" timestamp="2022-10-13T08:42:47.335" classname="test_q1" />
-    <testcase name="int_case1" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="28" status="run" result="completed" time="0" timestamp="2022-10-13T08:42:47.335" classname="test_q1" />
-    <testcase name="int_case2" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="36" status="run" result="completed" time="0" timestamp="2022-10-13T08:42:47.335" classname="test_q1" />
-    <testcase name="float_case0" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="44" status="run" result="completed" time="0" timestamp="2022-10-13T08:42:47.335" classname="test_q1" />
-    <testcase name="double_case0" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="52" status="run" result="completed" time="0" timestamp="2022-10-13T08:42:47.335" classname="test_q1" />
+<testsuites tests="8" failures="0" disabled="0" errors="0" time="0" timestamp="2022-10-13T08:54:33.157" name="AllTests">
+  <testsuite name="test_q1" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2022-10-13T08:54:33.157">
+    <testcase name="int_case0" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="20" status="run" result="completed" time="0" timestamp="2022-10-13T08:54:33.157" classname="test_q1" />
+    <testcase name="int_case1" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="28" status="run" result="completed" time="0" timestamp="2022-10-13T08:54:33.157" classname="test_q1" />
+    <testcase name="int_case2" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="36" status="run" result="completed" time="0" timestamp="2022-10-13T08:54:33.157" classname="test_q1" />
+    <testcase name="float_case0" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="44" status="run" result="completed" time="0" timestamp="2022-10-13T08:54:33.157" classname="test_q1" />
+    <testcase name="double_case0" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="52" status="run" result="completed" time="0" timestamp="2022-10-13T08:54:33.157" classname="test_q1" />
   </testsuite>
-  <testsuite name="test_q3" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2022-10-13T08:42:47.335">
-    <testcase name="int_case0" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="60" status="run" result="completed" time="0" timestamp="2022-10-13T08:42:47.335" classname="test_q3" />
-    <testcase name="int_case1" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="73" status="run" result="completed" time="0" timestamp="2022-10-13T08:42:47.335" classname="test_q3" />
-    <testcase name="int_case2" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="85" status="run" result="completed" time="0" timestamp="2022-10-13T08:42:47.336" classname="test_q3" />
+  <testsuite name="test_q3" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2022-10-13T08:54:33.157">
+    <testcase name="int_case0" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="60" status="run" result="completed" time="0" timestamp="2022-10-13T08:54:33.157" classname="test_q3" />
+    <testcase name="int_case1" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="73" status="run" result="completed" time="0" timestamp="2022-10-13T08:54:33.157" classname="test_q3" />
+    <testcase name="int_case2" file="/home/runner/work/find_stones_solution/find_stones_solution/test/test.cpp" line="85" status="run" result="completed" time="0" timestamp="2022-10-13T08:54:33.157" classname="test_q3" />
   </testsuite>
 </testsuites>
