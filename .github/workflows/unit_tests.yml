@@ -24,8 +24,8 @@ jobs:
           cmake ..
           make
           cd test
-          ./unit_test --gtest_output=xml:../../results.xml
-          vjunit -f ../../results.xml -o ../../index.html
+          ./unit_test --gtest_output=xml:./results.xml
+          vjunit -f ./results.xml -o ./index.html
 
       # Upload the results to the gitpages
       - name: Upload results to gitpages
@@ -33,7 +33,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: results.html
+          FOLDER: build/test
 
 
 #       # commit the results to the repo 
