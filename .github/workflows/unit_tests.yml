@@ -25,7 +25,7 @@ jobs:
           make
           cd test
           ./unit_test --gtest_output=xml:../../results.xml
-          vjunit -f ../../results.xml -o ../../results.html
+          vjunit -f ../../results.xml -o ../../index.html
 
       # Upload the results to the gitpages
       - name: Upload results to gitpages
