@@ -2,9 +2,8 @@
 
 ## Introduction
 
-为了方便贵司面试官对我的代码进行评估，我将代码提交到了github上，地址为：[find_stones](https://github.com/windzu/find_stones_solution)
-
-测试结果通过github action生成，可在[github page](https://windzu.github.io/find_stones_solution/)查看
+- 工程地址：[find_stones](https://github.com/windzu/find_stones_solution)
+- 测试结果：[测试结果](https://windzu.github.io/find_stones_solution/)
 
 ### Local Test
 
